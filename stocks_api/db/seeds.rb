@@ -6,12 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Investor.create([
-    {name: "Sergio", email: "sergio@me.com"},
-    {name: "Alberto", email: "alberto@me.com"},
-    {name: "Cardenas", email: "cardenas@me.com"}
+Sector.create([
+    {name: "Technology"},
+    {name: "Financials"},
+    {name: "Real Estate"},
+    {name: "Energy"},
+    {name: "Materials"},
+    {name: "Healthcare"},
+    {name: "Industrials"},
+    {name: "Consumer Discretionary"},
+    {name: "Consumer Staples"},
+    {name: "Utilities"},
+    {name: "Telecommunication"},
 ])
 
-msft = Stock.create(company: "Microsoft", ticker: "MSFT", price: "$275", investor_id: 1)
-pypl = Stock.create(company: "Paypal", ticker: "PYPL", price: "$300", investor_id: 2)
-meli = Stock.create(company: "Mercado Libre", ticker: "MELI", price: "$1,500", investor_id: 3)
+msft = Stock.create(company: "Microsoft", ticker: "MSFT", price: "$275", sector_id: 1)
+pypl = Stock.create(company: "Paypal", ticker: "PYPL", price: "$300", sector_id: 1)
+cof = Stock.create(company: "Capital One", ticker: "COF", price: "$150", sector_id: 2)

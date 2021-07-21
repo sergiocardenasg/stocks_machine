@@ -4,7 +4,7 @@ class CreateStocks < ActiveRecord::Migration[6.1]
       t.string :company
       t.string :ticker
       t.string :price
-      t.integer :investor_id
+      t.integer :sector_id
 
       t.timestamps
     end

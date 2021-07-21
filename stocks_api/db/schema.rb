@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_21_011841) do
+ActiveRecord::Schema.define(version: 2021_07_21_015121) do
 
-  create_table "investors", force: :cascade do |t|
+  create_table "sectors", force: :cascade do |t|
     t.string "name"
-    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -23,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_07_21_011841) do
     t.string "company"
     t.string "ticker"
     t.string "price"
-    t.integer "investor_id"
+    t.integer "sector_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
