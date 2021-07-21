@@ -8,7 +8,7 @@ class Stock {
         this.price = price
         this.sector_id = sector_id
 
-        this.element = document.createAttribute("li")
+        this.element = document.createElement("li")
         this.element.dataset.id = this.id
         this.element.id = `stock-${this.id}`
         
@@ -26,6 +26,6 @@ class Stock {
     }
 
     slapOnDOM(){
-        Stock.stockContainer.appendChild(stockHTML())
+        Stock.stockContainer.appendChild(this.stockHTML())
     }
 }
