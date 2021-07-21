@@ -7,7 +7,10 @@ class StockService {
         fetch(`${this.endpoint}/stocks`)
         .then(resp => resp.json())
         .then(stocks => {
-            debugger
+            for (const stock of stocks) {
+                const s = new Stock (stock)
+                s.slapOnDOM()
+            }
         })
     }
 }
