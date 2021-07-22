@@ -18,6 +18,7 @@ addBtn.addEventListener('click', () => {
         Stock.formContainer.addEventListener('submit', () => {
             event.preventDefault()
             stockService.createStock()
+            event.target.reset()
         })
     } 
     else {
