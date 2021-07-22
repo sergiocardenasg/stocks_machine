@@ -13,4 +13,15 @@ class StockService {
             }
         })
     }
+
+    // getStocksAPI() {
+    //     fetch(`https://finnhub.io/api/v1/search?q=apple&token=btco2tf48v6vroferuag`)
+    //         .then(resp => resp.json())
+    //         .then(stocks => {
+    //         for (const stock of stocks) {
+    //             const s = new Stock (stock)
+    //             s.slapOnDOM()
+    //         }
+    //     })
+    // }
 }

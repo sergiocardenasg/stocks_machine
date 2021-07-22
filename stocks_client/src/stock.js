@@ -1,6 +1,8 @@
 class Stock {
     static all = []
     static stockContainer = document.getElementById("stocks-container")
+    static formContainer = document.getElementById("form-container")
+
     constructor({id, company, ticker, price, sector_id}){
         this.id = id
         this.company = company
@@ -27,5 +29,17 @@ class Stock {
 
     slapOnDOM(){
         Stock.stockContainer.appendChild(this.stockHTML())
+    }
+
+    static renderForm() {
+        Stock.formContainer.innerHTML += `
+        <form id="new-stock-form">
+            Company: <input type="text" id="company">
+            Ticker: <input type="text" id="ticker">
+            Price: <input type="text" id="price">
+            Sector: <input type="text" id="sector">
+            <input type="submit" id="create">
+        <form>
+    `
     }
 }

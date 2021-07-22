@@ -5,3 +5,4 @@ const baseURL = "http://127.0.0.1:3000"
 
 const stockService = new StockService(baseURL)
 stockService.getStocks()
+Stock.renderForm()
