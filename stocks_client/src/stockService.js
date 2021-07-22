@@ -31,7 +31,7 @@ class StockService {
         //     body: JSON.stringify(stock)
         // }
 
-        // debugger
+        debugger
 
         // fetch(`${this.endpoint}/stocks`, configObj)
         // .then(resp => resp.json())
