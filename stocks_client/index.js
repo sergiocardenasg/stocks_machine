@@ -16,7 +16,7 @@ addBtn.addEventListener('click', () => {
         addBtn.innerHTML = "Hide Form"
         stockForm.style.display = 'block'
         Stock.formContainer.addEventListener('submit', () => {
-            //event.preventDefault()
+            event.preventDefault()
             stockService.createStock()
         })
     } 

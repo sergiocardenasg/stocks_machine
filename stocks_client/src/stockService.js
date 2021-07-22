@@ -22,19 +22,19 @@ class StockService {
             sector_id: 1
         }
 
-        // const configObj = {
-        //     method: 'POST',
-        //     headers: {
-        //       'Content-Type': 'application/json',
-        //       Accept: "application/json"
-        //     },
-        //     body: JSON.stringify(stock)
-        // }
+        const configObj = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(stock)
+        }
 
-        debugger
-
-        // fetch(`${this.endpoint}/stocks`, configObj)
-        // .then(resp => resp.json())
+        fetch(`${this.endpoint}/stocks`, configObj)
+        .then(resp => resp.json())
+        .then(stock => {
+            console.log(stock)
+        })
     }
 
     // postStock(stockData) {
