@@ -14,6 +14,49 @@ class StockService {
         })
     }
 
+    createStock() {
+        const stock = {
+            company: document.getElementById("company").value,
+            ticker: document.getElementById("ticker").value,
+            price: document.getElementById("price").value,
+            sector_id: 1
+        }
+
+        // const configObj = {
+        //     method: 'POST',
+        //     headers: {
+        //       'Content-Type': 'application/json',
+        //       Accept: "application/json"
+        //     },
+        //     body: JSON.stringify(stock)
+        // }
+
+        // debugger
+
+        // fetch(`${this.endpoint}/stocks`, configObj)
+        // .then(resp => resp.json())
+    }
+
+    // postStock(stockData) {
+    //     fetch(`${this.endpoint}/stocks`, {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //           Accept: "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //           "company": stockData.company.value,
+    //           "ticker": stockData.ticker.value,
+    //           "price": stockData.price.value,
+    //           "sector": stockData.sector_id.name.value,
+    //         })
+    //       })
+    //       .then(resp => resp.json())
+    //       .then((newStock) => {
+    //         renderStocks(newStock)
+    //       });
+    //   };
+
     // getStocksAPI() {
     //     fetch(`https://finnhub.io/api/v1/search?q=apple&token=btco2tf48v6vroferuag`)
     //         .then(resp => resp.json())

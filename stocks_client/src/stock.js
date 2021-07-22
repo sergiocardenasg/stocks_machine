@@ -37,7 +37,6 @@ class Stock {
             Company: <input type="text" id="company">
             Ticker: <input type="text" id="ticker">
             Price: <input type="text" id="price">
-            Sector: <input type="text" id="sector">
             <input type="submit" id="create">
         <form>
     `
