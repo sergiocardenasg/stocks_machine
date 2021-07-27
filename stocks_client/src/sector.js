@@ -3,16 +3,12 @@ class Sector {
     static sectorContainer = document.getElementById("sector-container")
     static all = []
 
-    sectorHTML() {
-        this.element.innerHTML += `
-            <div>
-                <button>${this.name}</button>
-            </div>
-        `
-        return this.element
+    static sectorHTML() {
+        // setTimeout(function () {
+        //     const btns = Sector.all.map(sector => {return `<button>${sector.name}</button>`})
+        // }, 2000)
+        // debugger
+        // Sector.sectorContainer.appendChild(btns)
     }
 
-    sectorButton(sector){
-        Sector.sectorContainer.appendChild(this.sectorHTML())
-    }
 }

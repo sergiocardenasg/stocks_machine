@@ -20,7 +20,7 @@ class Stock {
 
     stockHTML() {
         this.element.innerHTML += `
-            <div>
+            <div class = "filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name}">
                 <h2>${this.ticker}</h2>
                 <h3>${Sector.all.find(sector => sector.id === this.sector_id).name}</h3>
                 <p>${this.company} - $${this.price}</p>

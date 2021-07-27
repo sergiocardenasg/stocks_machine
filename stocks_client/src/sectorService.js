@@ -14,5 +14,7 @@ class SectorService {
                 Sector.all.push(sector)
             })
         })
+        // .then(Sector.all.map(sector => Sector.sectorContainer.appendChild(`<button>${sector.name}</button>`)))
+        // debugger
     }
 }

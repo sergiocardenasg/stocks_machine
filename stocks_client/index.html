@@ -3,13 +3,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Stocks Machine</title>
 </head>
 <body>
 
     <p style="text-align:center">
         <button id="new-stock-btn">Add a Stock!</button>
       </p>
+
+    <div id="sectors-container">
+        <button class="btn active" onclick="filterSelection('all')"> Show All </button>
+        <button class="btn" onclick="filterSelection('Technology')"> Technology </button>
+        <button class="btn" onclick="filterSelection('Financials')"> Financials </button>
+        <button class="btn" onclick="filterSelection('Real Estate')"> Real Estate </button>
+        <button class="btn" onclick="filterSelection('Energy')"> Energy </button>
+        <button class="btn" onclick="filterSelection('Materials')"> Materials </button>
+        <button class="btn" onclick="filterSelection('Healthcare')"> Healthcare </button>
+        <button class="btn" onclick="filterSelection('Industrials')"> Industrial </button>
+        <button class="btn" onclick="filterSelection('Consumer Discretionary')"> Consumer Discretionary </button>
+        <button class="btn" onclick="filterSelection('Consumer Staples')"> Consumer Staples </button>
+        <button class="btn" onclick="filterSelection('Utilities')"> Utilities </button>
+        <button class="btn" onclick="filterSelection('Telecommunication')"> Telecommunication </button>
+    </div>
 
     <div id="form-container" style="display:none">
 
@@ -19,14 +35,11 @@
 
     </div>
 
-    <div id="sectors-container">
-
-    </div>
-
     <script src="src/sector.js"></script>
     <script src="src/stock.js"></script>
     <script src="src/sectorService.js"></script>
     <script src="src/stockService.js"></script>
     <script src="index.js"></script>
+
 </body>
 </html>
