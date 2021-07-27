@@ -19,6 +19,8 @@ addBtn.addEventListener('click', () => {
             event.preventDefault()
             stockService.createStock()
             event.target.reset()
+            stockForm.style.display = 'none'
+            addBtn.innerHTML = "Add a Stock!"
         })
     } 
     else {

@@ -41,13 +41,13 @@ class Stock {
             Ticker: <input type="text" id="ticker">
             Price: <input type="text" id="price"> <br>
             Sector: <br>
-                <input type="radio" id="1" name="sector" value="Technology">
+                <input type="radio" id="1" name="sector" value="1">
                 <label for="tech">Technology</label><br>
-                <input type="radio" id="2" name="sector" value="Financials">
+                <input type="radio" id="2" name="sector" value="2">
                 <label for="financials">Financials</label><br>
-                <input type="radio" id="3" name="sector" value="Real Estate">
+                <input type="radio" id="3" name="sector" value="3">
                 <label for="realestate">Real Estate</label><br>
-                <input type="radio" id="4" name="sector" value="Energy">
+                <input type="radio" id="4" name="sector" value="4">
                 <label for="energy">Energy</label><br>
                 <input type="radio" id="5" name="sector" value="Materials">
                 <label for="materials">Materials</label><br>

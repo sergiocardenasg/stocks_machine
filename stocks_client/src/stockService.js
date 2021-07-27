@@ -15,11 +15,12 @@ class StockService {
     }
 
     createStock() {
+
         const stock = {
             company: document.getElementById("company").value,
             ticker: document.getElementById("ticker").value,
             price: document.getElementById("price").value,
-            sector_id: 1
+            sector_id: document.querySelector('input[type=radio]:checked').id
         }
 
         const configObj = {
@@ -34,6 +35,7 @@ class StockService {
         .then(resp => resp.json())
         .then(stock => {
             const s = new Stock(stock)
+            console.log(s)
             s.slapOnDOM()
         })
     }
