@@ -40,3 +40,10 @@
   margin: center;
   width: 100%;
 }
+
+div.ui-menu li {
+  list-style:none;
+  background-image:none;
+  background-repeat:none;
+  background-position:0; 
+}

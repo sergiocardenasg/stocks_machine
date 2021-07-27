@@ -8,7 +8,7 @@ const sectorService = new SectorService(baseURL)
 sectorService.getSectors()
 setTimeout(() => {
     stockService.getStocks()
-}, 10); 
+}, 20); 
 Stock.renderForm()
 
 
