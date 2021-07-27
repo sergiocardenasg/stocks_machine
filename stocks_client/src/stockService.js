@@ -20,7 +20,7 @@ class StockService {
             company: document.getElementById("company").value,
             ticker: document.getElementById("ticker").value,
             price: document.getElementById("price").value,
-            sector_id: document.querySelector('input[type=radio]:checked').id
+            sector_id: document.querySelector("input[type=radio]:checked").id
         }
 
         const configObj = {
