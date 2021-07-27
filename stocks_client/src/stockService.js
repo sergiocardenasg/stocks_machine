@@ -33,7 +33,8 @@ class StockService {
         fetch(`${this.endpoint}/stocks`, configObj)
         .then(resp => resp.json())
         .then(stock => {
-            console.log(stock)
+            const s = new Stock(stock)
+            s.slapOnDOM()
         })
     }
 
