@@ -2,6 +2,7 @@ class Stock {
     static all = []
     static stockContainer = document.getElementById("stocks-container")
     static formContainer = document.getElementById("form-container")
+    
 
     constructor({id, company, ticker, price, sector_id}){
         this.id = id
@@ -32,11 +33,36 @@ class Stock {
     }
 
     static renderForm() {
+        // sectorIDs = sectors.map(sector => sector.sector_id);
+        // sectorNames = sectors.map(sector => sector.name);
         Stock.formContainer.innerHTML += `
         <form id="new-stock-form">
             Company: <input type="text" id="company">
             Ticker: <input type="text" id="ticker">
-            Price: <input type="text" id="price">
+            Price: <input type="text" id="price"> <br>
+            Sector: <br>
+                <input type="radio" id="1" name="sector" value="Technology">
+                <label for="tech">Technology</label><br>
+                <input type="radio" id="2" name="sector" value="Financials">
+                <label for="financials">Financials</label><br>
+                <input type="radio" id="3" name="sector" value="Real Estate">
+                <label for="realestate">Real Estate</label><br>
+                <input type="radio" id="4" name="sector" value="Energy">
+                <label for="energy">Energy</label><br>
+                <input type="radio" id="5" name="sector" value="Materials">
+                <label for="materials">Materials</label><br>
+                <input type="radio" id="6" name="sector" value="Healthcare">
+                <label for="healthcare">Healthcare</label><br>
+                <input type="radio" id="7" name="sector" value="Industrials">
+                <label for="industrials">Industrials</label><br>
+                <input type="radio" id="8" name="sector" value="Consumer Discretionary">
+                <label for="disc">Consumer Discretionary</label><br>
+                <input type="radio" id="9" name="sector" value="Consumer Staples">
+                <label for="staples">Consumer Staples</label><br>
+                <input type="radio" id="10" name="sector" value="Utilities">
+                <label for="utilities">Utilities</label><br>
+                <input type="radio" id="11" name="sector" value="Telecommunication">
+                <label for="telecom">Telecommunication</label><br>
             <input type="submit" id="create">
         <form>
     `

@@ -6,8 +6,8 @@ class SectorService {
     getSectors() {
         fetch(`${this.endpoint}/sectors`)
         .then(resp => resp.json())
-        .then(sectors => {
-            debugger
-        })
+        // .then(sectors => {
+        //     debugger
+        // })
     }
 }

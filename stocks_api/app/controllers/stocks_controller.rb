@@ -15,6 +15,7 @@ class StocksController < ApplicationController
 
   # POST /stocks
   def create
+    # byebug
     @stock = Stock.new(stock_params)
 
     if @stock.save
@@ -46,6 +47,6 @@ class StocksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def stock_params
-      params.require(:stock).permit(:company, :ticker, :price, :investor_id)
+      params.require(:stock).permit(:company, :ticker, :price, :sector_id)
     end
 end
