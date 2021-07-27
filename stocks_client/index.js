@@ -6,7 +6,9 @@ const stockService = new StockService(baseURL)
 const sectorService = new SectorService(baseURL)
 
 sectorService.getSectors()
-stockService.getStocks()
+setTimeout(() => {
+    stockService.getStocks()
+}, 10); 
 Stock.renderForm()
 
 
