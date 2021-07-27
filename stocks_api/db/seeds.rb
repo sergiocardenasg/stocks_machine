@@ -20,6 +20,6 @@ Sector.create([
     {name: "Telecommunication"},
 ])
 
-msft = Stock.create(company: "Microsoft", ticker: "MSFT", price: "$275", sector_id: 1)
-pypl = Stock.create(company: "Paypal", ticker: "PYPL", price: "$300", sector_id: 1)
-cof = Stock.create(company: "Capital One", ticker: "COF", price: "$150", sector_id: 2)
+msft = Stock.create(company: "Microsoft", ticker: "MSFT", price: "275", sector_id: 1)
+pypl = Stock.create(company: "Paypal", ticker: "PYPL", price: "300", sector_id: 1)
+cof = Stock.create(company: "Capital One", ticker: "COF", price: "150", sector_id: 2)

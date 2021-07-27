@@ -8,14 +8,13 @@ class StockService {
         .then(resp => resp.json())
         .then(stocks => {
             for (const stock of stocks) {
-                const s = new Stock (stock)
+                const s = new Stock(stock)
                 s.slapOnDOM()
             }
         })
     }
 
     createStock() {
-
         const stock = {
             company: document.getElementById("company").value,
             ticker: document.getElementById("ticker").value,

@@ -3,10 +3,12 @@ const addBtn = document.querySelector("#new-stock-btn");
 const stockForm = document.querySelector("#form-container");
 let addStock = false;
 const stockService = new StockService(baseURL)
+const sectorService = new SectorService(baseURL)
+
 
 // const sectorService = new SectorService(baseURL)
 // sectorService.getSectors()
-
+sectorService.getSectors()
 stockService.getStocks()
 Stock.renderForm()
 
