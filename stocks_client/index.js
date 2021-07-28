@@ -6,6 +6,7 @@ const stockService = new StockService(baseURL)
 const sectorService = new SectorService(baseURL)
 
 sectorService.getSectors()
+//do not use setTimeout
 setTimeout(() => {stockService.getStocks()}, 20); 
 Stock.renderForm()
 
@@ -28,7 +29,7 @@ addBtn.addEventListener('click', () => {
     }
   });
   
-  filterSelection('all')
+filterSelection('all')
 function filterSelection(c) {
     let x, i;
     x = document.getElementsByClassName("filterDiv");

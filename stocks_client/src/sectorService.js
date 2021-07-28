@@ -10,11 +10,13 @@ class SectorService {
         fetch(`${this.endpoint}/sectors`)
         .then(resp => resp.json())
         .then(sectors => {
-            sectors.forEach(sector => {
-                Sector.all.push(sector)
-            })
+            //create objects
+            // sectors.forEach(sector => {
+            //     Sector.all.push(sector)
+            // })
+            for (const sector of sectors) {
+                const sect = new Sector(sector)
+            }
         })
-        // .then(Sector.all.map(sector => Sector.sectorContainer.appendChild(`<button>${sector.name}</button>`)))
-        // debugger
     }
 }

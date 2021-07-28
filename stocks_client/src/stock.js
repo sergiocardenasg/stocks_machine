@@ -72,7 +72,7 @@ class Stock {
 
     // validateSector(){
     //     if (document.querySelector("input[type=radio]").checked == true) {
-    //         document.querySelector("input[type=radio]:checked").id
+    //         return document.querySelector("input[type=radio]:checked").id
     //     }
     //     else{
     //         alert("Select a sector.");

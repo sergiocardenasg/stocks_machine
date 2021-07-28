@@ -52,6 +52,7 @@ class StockService {
             }
         })
         .then(alert('Stock has been deleted.'))
+        // remove HTML element
     }
 
     // postStock(stockData) {
