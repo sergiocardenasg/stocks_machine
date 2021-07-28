@@ -39,9 +39,9 @@ class Stock {
         // sectorNames = sectors.map(sector => sector.name);
         Stock.formContainer.innerHTML += `
         <form id="new-stock-form">
-            Company: <input type="text" id="company">
-            Ticker: <input type="text" id="ticker">
-            Price: <input type="text" id="price"> <br>
+            Company: <input type="text" id="company" required>
+            Ticker: <input type="text" id="ticker" required>
+            Price: <input type="text" id="price" required> <br>
             Sector: <br>
                 <input type="radio" id="1" name="sector" value="Technology">
                 <label for="tech">Technology</label><br>
@@ -69,6 +69,16 @@ class Stock {
         <form>
     `
     }
+
+    // validateSector(){
+    //     if (document.querySelector("input[type=radio]").checked == true) {
+    //         document.querySelector("input[type=radio]:checked").id
+    //     }
+    //     else{
+    //         alert("Select a sector.");
+    //         return false;
+    //     }
+    // }
     
     deleteClick = () => {
         if (event.target.innerText === "Delete"){
