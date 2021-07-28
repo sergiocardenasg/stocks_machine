@@ -10,7 +10,6 @@ class SectorService {
         fetch(`${this.endpoint}/sectors`)
         .then(resp => resp.json())
         .then(sectors => {
-            //create objects
             // sectors.forEach(sector => {
             //     Sector.all.push(sector)
             // })

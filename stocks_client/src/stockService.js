@@ -52,7 +52,8 @@ class StockService {
             }
         })
         .then(alert('Stock has been deleted.'))
-        // remove HTML element
+        let myobj = document.getElementById(`stock-${id}`);
+        myobj.remove();
     }
 
     // postStock(stockData) {
