@@ -6,11 +6,8 @@ const stockService = new StockService(baseURL)
 const sectorService = new SectorService(baseURL)
 
 sectorService.getSectors()
-setTimeout(() => {
-    stockService.getStocks()
-}, 20); 
+setTimeout(() => {stockService.getStocks()}, 20); 
 Stock.renderForm()
-
 
 addBtn.addEventListener('click', () => {
     addStock = !addStock
@@ -30,10 +27,10 @@ addBtn.addEventListener('click', () => {
         stockForm.style.display = 'none'
     }
   });
-
-filterSelection("all")
+  
+  filterSelection('all')
 function filterSelection(c) {
-    var x, i;
+    let x, i;
     x = document.getElementsByClassName("filterDiv");
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
@@ -43,7 +40,7 @@ function filterSelection(c) {
 }
 
 function w3AddClass(element, name) {
-  var i, arr1, arr2;
+  let i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
@@ -52,7 +49,7 @@ function w3AddClass(element, name) {
 }
 
 function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
+  let i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
@@ -72,3 +69,4 @@ for (let i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+

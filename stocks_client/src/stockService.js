@@ -22,6 +22,11 @@ class StockService {
             sector_id: document.querySelector("input[type=radio]:checked").id
         }
 
+        if (document.querySelector("input[type=radio]:checked") == null) {
+            alert("Name must be filled out");
+            return false;
+        }
+
         const configObj = {
             method: 'POST',
             headers: {
@@ -37,6 +42,16 @@ class StockService {
             console.log(s)
             s.slapOnDOM()
         })
+    }
+
+    deleteStock(id){
+        fetch(`${this.endpoint}/stocks/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(alert('Stock has been deleted.'))
     }
 
     // postStock(stockData) {

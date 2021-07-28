@@ -14,16 +14,17 @@ class Stock {
         this.element = document.createElement("li")
         this.element.dataset.id = this.id
         this.element.id = `stock-${this.id}`
-        
+        this.element.addEventListener('click', this.deleteClick)
         Stock.all.push(this)
     }
 
     stockHTML() {
         this.element.innerHTML += `
-            <div class = "filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name}">
+            <div class="filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name}">
                 <h2>${this.ticker}</h2>
                 <h3>${Sector.all.find(sector => sector.id === this.sector_id).name}</h3>
                 <p>${this.company} - $${this.price}</p>
+                <button id="deleteBtn">Delete</button>
             </div>
         `
         return this.element
@@ -67,5 +68,11 @@ class Stock {
             <input type="submit" id="create">
         <form>
     `
+    }
+    
+    deleteClick = () => {
+        if (event.target.innerText === "Delete"){
+            stockService.deleteStock(this.id)
+        }
     }
 }
