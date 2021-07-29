@@ -15,12 +15,13 @@ class StockService {
     }
 
     createStock() {
-        // if (!document.querySelector("input[type=radio]").checked) {
-        //     alert("Please select a sector for the stock.");
-        // }
-        // else {
-        //     return true
-        // }
+        let radioButtons = document.getElementsByName("sector");
+        for (var i = 0; i < radioButtons.length; i++) {
+            if (!radioButtons[i].checked) {
+                alert("Please select a sector for the stock.")
+                break
+            }
+        }
 
         const stock = {
             company: document.getElementById("company").value,
