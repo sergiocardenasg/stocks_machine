@@ -21,10 +21,11 @@ class Stock {
     stockHTML() {
         this.element.innerHTML += `
             <div class="filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name} show">
-                <h2 class="ticker">${this.ticker}</h2>
-                <h3 class="sector">${Sector.all.find(sector => sector.id === this.sector_id).name}</h3>
-                <p class="name">${this.company}</p>
-                <p class="price">$${this.price}</p>
+                <br>
+                <h5 class="ticker">${this.ticker}</h5>
+                <h7 class="sector">${Sector.all.find(sector => sector.id === this.sector_id).name}</h7> <br>
+                <h7 class="name">${this.company}</h7> <br>
+                <h8 class="price">$${this.price}</h8> <br>
                 <button id="deleteBtn">Delete</button>
             </div>
         `
@@ -66,7 +67,7 @@ class Stock {
                 <label for="utilities">Utilities</label><br>
                 <input type="radio" id="11" name="sector" value="Telecommunication">
                 <label for="telecom">Telecommunication</label><br>
-            <input type="submit" id="create">
+            <input type="submit" id="create btn-secondary">
         <form>
     `
     }

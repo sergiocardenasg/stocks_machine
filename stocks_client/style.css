@@ -2,7 +2,7 @@
   float: left;
   background-color: green;
   color: #ffffff;
-  width: 100px;
+  width: 150px;
   line-height: 20px;
   text-align: center;
   margin: 2px;
@@ -52,4 +52,16 @@ div.ui-menu li {
   background-image:none;
   background-repeat:none;
   background-position:0; 
+}
+
+#new-stock-form{
+  display: inline-block;
+}
+
+body {
+  text-align: center;
+}
+
+label{
+  font: bold
 }
