@@ -29,7 +29,6 @@ addBtn.addEventListener('click', () => {
     }
   });
   
-filterSelection('all')
 function filterSelection(c) {
     let x, i;
     x = document.getElementsByClassName("filterDiv");

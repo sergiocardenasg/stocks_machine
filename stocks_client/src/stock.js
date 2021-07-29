@@ -20,7 +20,7 @@ class Stock {
 
     stockHTML() {
         this.element.innerHTML += `
-            <div class="filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name}">
+            <div class="filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name} show">
                 <h2>${this.ticker}</h2>
                 <h3>${Sector.all.find(sector => sector.id === this.sector_id).name}</h3>
                 <p>${this.company} - $${this.price}</p>
@@ -69,16 +69,6 @@ class Stock {
         <form>
     `
     }
-
-    // validateSector(){
-    //     if (document.querySelector("input[type=radio]").checked == true) {
-    //         return document.querySelector("input[type=radio]:checked").id
-    //     }
-    //     else{
-    //         alert("Select a sector.");
-    //         return false;
-    //     }
-    // }
     
     deleteClick = () => {
         if (event.target.innerText === "Delete"){

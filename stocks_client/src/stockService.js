@@ -15,16 +15,18 @@ class StockService {
     }
 
     createStock() {
+        // if (!document.querySelector("input[type=radio]").checked) {
+        //     alert("Please select a sector for the stock.");
+        // }
+        // else {
+        //     return true
+        // }
+
         const stock = {
             company: document.getElementById("company").value,
             ticker: document.getElementById("ticker").value,
             price: document.getElementById("price").value,
             sector_id: document.querySelector("input[type=radio]:checked").id
-        }
-
-        if (document.querySelector("input[type=radio]:checked") == null) {
-            alert("Name must be filled out");
-            return false;
         }
 
         const configObj = {
@@ -42,6 +44,7 @@ class StockService {
             console.log(s)
             s.slapOnDOM()
         })
+        filterSelection("all")
     }
 
     deleteStock(id){
