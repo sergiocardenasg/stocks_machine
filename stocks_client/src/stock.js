@@ -21,9 +21,10 @@ class Stock {
     stockHTML() {
         this.element.innerHTML += `
             <div class="filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name} show">
-                <h2>${this.ticker}</h2>
-                <h3>${Sector.all.find(sector => sector.id === this.sector_id).name}</h3>
-                <p>${this.company} - $${this.price}</p>
+                <h2 class="ticker">${this.ticker}</h2>
+                <h3 class="sector">${Sector.all.find(sector => sector.id === this.sector_id).name}</h3>
+                <p class="name">${this.company}</p>
+                <p class="price">$${this.price}</p>
                 <button id="deleteBtn">Delete</button>
             </div>
         `
