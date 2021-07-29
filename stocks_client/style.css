@@ -11,6 +11,10 @@
   font: arial;
 }
 
+.ticker{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .show {
   display: block;
 }
