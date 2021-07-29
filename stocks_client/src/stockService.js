@@ -43,8 +43,11 @@ class StockService {
             const s = new Stock(stock)
             console.log(s)
             s.slapOnDOM()
+            filterSelection("all")
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            document.getElementById("all-sec").classList += " active";
         })
-        filterSelection("all")
     }
 
     deleteStock(id){
