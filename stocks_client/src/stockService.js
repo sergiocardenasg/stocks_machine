@@ -15,13 +15,14 @@ class StockService {
     }
 
     createStock() {
-        let radioButtons = document.getElementsByName("sector");
-        for (var i = 0; i < radioButtons.length; i++) {
-            if (!radioButtons[i].checked) {
-                alert("Please select a sector for the stock.")
-                break
-            }
+        let radioButton = document.querySelector('input[name="sector"]:checked');
+        if (radioButton == null) {
+            alert("Please select a sector for the stock.")
         }
+
+        // if (radioButton === Stock.all.find(stock => stock.name === radioButton.name)){
+        //     alert("This stock has already been added.")
+        // }
 
         const stock = {
             company: document.getElementById("company").value,
