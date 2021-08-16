@@ -4,13 +4,16 @@ const stockForm = document.querySelector("#form-container");
 let addStock = false;
 const stockService = new StockService(baseURL)
 const sectorService = new SectorService(baseURL)
-
+//start up routine - inside DOMContentLoad
 sectorService.getSectors()
 //do not use setTimeout
-setTimeout(() => {stockService.getStocks()}, 20); 
+stockService.getStocks()
 Stock.renderForm()
 
-addBtn.addEventListener('click', () => {
+addBtn.addEventListener('click', somefunction)
+
+
+function somefunction() {
     addStock = !addStock
     if (addStock) {
         addBtn.innerHTML = "Hide Form"
@@ -27,7 +30,7 @@ addBtn.addEventListener('click', () => {
         addBtn.innerHTML = "Add a Stock!"
         stockForm.style.display = 'none'
     }
-  });
+  };
   
 function filterSelection(c) {
     let x, i;

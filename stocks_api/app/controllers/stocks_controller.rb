@@ -3,9 +3,9 @@ class StocksController < ApplicationController
 
   # GET /stocks
   def index
-    @stocks = Stock.all
+    stocks = Stock.all
 
-    render json: @stocks
+    render json: stocks, include: :sector
   end
 
   # GET /stocks/1

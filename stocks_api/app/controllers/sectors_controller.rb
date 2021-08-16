@@ -3,14 +3,14 @@ class SectorsController < ApplicationController
 
   # GET /sectors
   def index
-    @sectors = Sector.all
-
-    render json: @sectors
+    sectors = Sector.all
+    sectors.first.stocks
+    render json: sectors, include: :stocks
   end
 
   # GET /sectors/1
   def show
-    render json: @sector
+    render json: sector
   end
 
   # POST /sectors

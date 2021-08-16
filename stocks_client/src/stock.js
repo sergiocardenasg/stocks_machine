@@ -4,12 +4,13 @@ class Stock {
     static formContainer = document.getElementById("form-container")
     
 
-    constructor({id, company, ticker, price, sector_id}){
+    constructor({id, company, ticker, price, sector}){
         this.id = id
         this.company = company
         this.ticker = ticker
         this.price = price
-        this.sector_id = sector_id
+        //this.sector_id = sector_id
+        this.sector = sector
 
         this.element = document.createElement("li")
         this.element.dataset.id = this.id
@@ -20,10 +21,10 @@ class Stock {
 
     stockHTML() {
         this.element.innerHTML += `
-            <div class="filterDiv ${Sector.all.find(sector => sector.id === this.sector_id).name} show">
+            <div class="filterDiv ${this.sector.name} show">
                 <br>
                 <h5 class="ticker">${this.ticker}</h5>
-                <h7 class="sector">${Sector.all.find(sector => sector.id === this.sector_id).name}</h7> <br>
+                <h7 class="sector">${this.sector.name}</h7> <br>
                 <h7 class="name">${this.company}</h7> <br>
                 <h8 class="price">$${this.price}</h8> <br>
                 <button id="deleteBtn">Delete</button>

@@ -3,9 +3,10 @@ class Sector {
     static sectorContainer = document.getElementById("sector-container")
     static all = []
 
-    constructor({id, name}){
+    constructor({id, name, stocks}){
         this.id = id
         this.name = name
+        this.stocks = stocks
 
         Sector.all.push(this)
     }
